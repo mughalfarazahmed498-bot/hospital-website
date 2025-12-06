@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Hero Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Best medical <br> help center.</h1>
+            <p>Lorem Ipsum is simply dummy text they are printing typesetting has been the industry's standard dummy text ever since the 1500s.</p>
+            <button class="service-btn">All Services →</button>
+        </div>
+        <div class="hero-img">
+            <img src="./images/hospital-emergency-room-stockcake.jpg" alt="doctor">
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="left-img">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="patient">
+        </div>
+        <div class="services-grid">
+            <div class="service-box">
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gastrology">
+                <h3>Gastrology</h3>
+            </div>
+            <div class="service-box">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ophthalmology">
+                <h3>Ophthalmology</h3>
+            </div>
+            <div class="service-box">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gynecology">
+                <h3>Gynecology</h3>
+            </div>
+            <div class="service-box">
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w-400&q=80" alt="Neurology">
+                <h3>Neurology</h3>
+            </div>
+            <div class="service-box">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dental Care">
+                <h3>Dental Care</h3>
+            </div>
+            <div class="service-box">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cosmetology">
+                <h3>Cosmetology</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-section">
+        <div class="exp-left">
+            <h2>Neonal medical care have 35 years of experience.</h2>
+            <p>Lorem Ipsum is simply dummy text they are printing typesetting has been the standard dummy text ever since the 1500s.</p>
+        </div>
+        <div class="exp-right">
+            <div class="exp-box">
+                <div class="icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>Lorem Ipsum is simply dummy text the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="exp-box">
+                <div class="icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <div>
+                    <h3>Our Vision</h3>
+                    <p>Lorem Ipsum is simply dummy text the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="team-section">
+    <div class="team-left">
+        <p class="sub-title">TEAM MEMBERS</p>
+        <h1>Experienced & <br> professional staff <br> of neonal.</h1>
+        <hr>
+        <p class="text">
+            Lorem Ipsum is simply dummy text they are printing typesetting has been the standard.
+        </p>
+    </div>
+
+    <div class="team-right">
+        <div class="member-image">
+            <img src="./images/hospital-emergency-room-stockcake.jpg" alt="Doctor">
+        </div>
+
+        <div class="member-info">
+            <h2>Ronald Hudson</h2>
+            <p class="role">Cardiology Specialist</p>
+            <p class="desc">
+                Lorem Ipsum simply dummy text printing and typesetting industry has been industry’s standard.
+            </p>
+
+            <div class="follow-box">
+                <span>Follow Now:</span>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Add hover effects for service boxes
+        document.querySelectorAll('.service-box').forEach(box => {
+            box.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            box.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.textContent.toLowerCase().replace(' ', '');
+                const targetSection = document.querySelector(`.${targetId}-section`) || 
+                                     document.querySelector(`.${targetId}`);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Appointment button functionality
+        document.querySelector('.appoint-btn').addEventListener('click', function() {
+            alert('Appointment booking functionality would open here.');
+        });
+
+        // Service button functionality
+        document.querySelector('.service-btn').addEventListener('click', function() {
+            document.querySelector('.services-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
